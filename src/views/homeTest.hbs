@@ -1,0 +1,40 @@
+<section id="sectionProds">
+    <div class="container-md mt-5 px-0">
+        {{#if productos}}
+        <table class="table mb-0 border rounded border-bottom-0">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody class="productsContainer">
+            
+            {{#each productos}}
+            <tr>
+                <td>{{this.titulo}}</td>
+                <td>{{this.precio}}</td>
+                <td><img style="max-width: 60px;" src="{{this.thumbnail}}" alt="{{this.titulo}}" class="w-100"></td>
+            </tr>
+            {{/each}}
+        </tbody>
+        </table>
+        {{else}}
+        <table class="table mb-0 border rounded border-bottom-0">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody class="productsContainer">
+            <tr>
+                <td colspan="3">No hay productos en la lista</td>
+            </tr>
+        </tbody>
+        </table>
+        {{/if}}
+    </div>
+</section>

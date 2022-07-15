@@ -1,0 +1,10 @@
+{{#if mensajes}}
+    <div class="h5 border-bottom border-secondary pb-2 mb-3">Reducción en la transacción: <span class="red_num"></span>%</div>
+{{/if}}
+{{#each mensajes}}
+<div class="msgItem d-flex flex-row flex-wrap">
+    <div class="pe-2 email">{{user}}</div>
+    <div class="time"><span>[</span>{{time}}<span class="pe-1">]: </span></div>
+    <div class="msj">{{message}}</div>
+</div>
+{{/each}}
